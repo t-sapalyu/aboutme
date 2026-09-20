@@ -11,7 +11,8 @@
   <meta property="og:title" content="Thin Sapal Yu - Software Engineer / AI &amp; Data Engineer" />
   <meta property="og:description" content="Software Engineer / AI &amp; Data Engineer seeking an internship from October 2026. 10+ years of software engineering, now building intelligent, data-driven solutions." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/profile.png" />
+  <meta property="og:url" content="https://t-sapalyu.github.io/aboutme/" />
+  <meta property="og:image" content="https://t-sapalyu.github.io/aboutme/assets/profile.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -355,47 +356,62 @@
       <h3 class="proj-subhead">Applied AI &amp; Data Science</h3>
       <div class="proj-grid">
         <div class="card proj-card featured">
-          <span class="tag">Hackathon Project - Multi-Agent RAG System · EPITA 2026</span>
-          <h3>ER-Assistant - AI Assistant for First Aid &amp; Emergency Medicine</h3>
+          <span class="tag">Hackathon Project · Multi-Agent RAG System · EPITA 2026</span>
+          <h3>ER-Assistant - A chatbot for First Aid &amp; Emergency Medicine</h3>
           <p>
-            Developed a retrieval-augmented generation (RAG) assistant for first-aid, CPR, and
-            emergency-medicine questions as part of a three-person team. Built a document-grounded RAG
-            pipeline using OpenAI embeddings, FAISS, and PyMuPDF, with retrieved passages highlighted
-            directly on the source PDF pages for transparent, page-level citations.
+            Built an AI assistant that answers questions about first aid, CPR, and emergency medicine
+            using the Red Cross First Aid/CPR/AED Comprehensive Guide as its primary knowledge source.
+            Developed as part of a 4-person team at EPITA.
           </p>
           <p>
-            Designed a multi-agent verification pipeline combining an Internal Researcher, External
-            Fact-Checker, and Synthesizer/Router, using MCP tools for external verification and controlled
-            retry routing to reduce unsupported or hallucinated answers while keeping latency bounded.
-            Integrated the system into a Gradio web interface with live knowledge ingestion, and exposed the
-            same pipeline through FastAPI, Flask, and MCP, with a WhatsApp interface and an analytics
-            dashboard for query volume, topics, answer quality, and API costs.
+            The system combines RAG and multi-agent verification to make answers more reliable and
+            traceable. Relevant passages are retrieved from the guide and highlighted directly on the
+            original PDF pages, allowing users to see where each answer comes from.
           </p>
+          <h4>Key Contributions</h4>
+          <ul class="feat-list" style="margin-bottom:16px;">
+            <li>Developed the RAG pipeline using PyMuPDF, OpenAI embeddings, and FAISS for document processing and semantic retrieval.</li>
+            <li>Designed a multi-agent verification pipeline with an Internal Researcher, External Fact-Checker, and Synthesizer/Router.</li>
+            <li>Integrated MCP tools for external fact-checking and added controlled retry and routing logic to handle uncertain answers.</li>
+            <li>Built a Gradio interface with live knowledge ingestion and page-level source highlighting.</li>
+            <li>Exposed the RAG pipeline through FastAPI, Flask, and MCP, and integrated it with a WhatsApp interface.</li>
+            <li>Developed an analytics dashboard to monitor query volume, topics, answer quality, and API costs.</li>
+          </ul>
           <div class="proj-tech">
-            <span class="chip">Python</span><span class="chip">OpenAI API</span>
-            <span class="chip">FAISS</span><span class="chip">Gradio</span>
-            <span class="chip">FastAPI</span><span class="chip">Flask</span>
-            <span class="chip">MCP / FastMCP</span><span class="chip">PyMuPDF</span>
-            <span class="chip">Node.js</span>
+            <span class="chip">Python</span><span class="chip">RAG</span>
+            <span class="chip">LLM</span><span class="chip">Multi-Agent Systems</span>
+            <span class="chip">OpenAI Embeddings</span><span class="chip">FAISS</span>
+            <span class="chip">MCP</span><span class="chip">FastAPI</span>
+            <span class="chip">Flask</span><span class="chip">Gradio</span>
+            <span class="chip">PyMuPDF</span>
           </div>
         </div>
         <div class="card proj-card featured">
           <span class="tag">Data Science in Production · EPITA 2026</span>
-          <h3>Energy Production Forecasting MLOps Platform</h3>
+          <h3>Energy Production Forecasting - MLOps Platform</h3>
           <p>
-            Developed an end-to-end MLOps platform for renewable energy production forecasting, automating
-            data ingestion, quality validation, model training, deployment, and monitoring. Scheduled data
-            and prediction workflows run on Apache Airflow with Great Expectations validation, storing
-            data-quality issues in PostgreSQL and reporting them through Microsoft Teams alerts; a Streamlit
-            interface connects to a FastAPI model-serving API for on-demand and historical predictions.
+            Developed an end-to-end MLOps platform for renewable energy production forecasting, covering
+            the full machine learning lifecycle from data ingestion and quality validation to automated
+            prediction, model training, deployment, and production monitoring.
           </p>
           <p>
-            Automated weekly model retraining and versioning with the MLflow Model Registry, using feature
-            selection and Random Forest models with RMSLE-based evaluation to promote improved models.
-            Production monitoring covers daily data-drift detection and Grafana dashboards for data quality,
-            prediction performance, training metrics, and system health, all containerized with Docker
-            Compose, with automated testing, linting, versioning, and releases through GitHub Actions.
+            The platform uses Apache Airflow to orchestrate data and prediction workflows. Predictions are
+            generated automatically on a scheduled basis and whenever newly ingested data becomes available.
+            Incoming data is validated with Great Expectations, with data-quality issues stored in PostgreSQL
+            and reported through Microsoft Teams. A Streamlit interface connects to a FastAPI model-serving
+            API for on-demand and historical predictions.
           </p>
+          <h4>Key Contributions</h4>
+          <ul class="feat-list" style="margin-bottom:16px;">
+            <li>Built automated data ingestion and prediction pipelines with Apache Airflow, including scheduled predictions and automatic prediction runs when new data is ingested.</li>
+            <li>Implemented data quality validation with Great Expectations and stored validation results and issues in PostgreSQL.</li>
+            <li>Developed model training and versioning workflows with MLflow and the MLflow Model Registry.</li>
+            <li>Implemented automatic model retraining when data drift is detected.</li>
+            <li>Built a FastAPI model-serving API and Streamlit interface for on-demand and historical energy production predictions.</li>
+            <li>Implemented production monitoring with daily data-drift detection and Grafana dashboards covering data quality, prediction performance, training metrics, and system health.</li>
+            <li>Containerized the complete platform using Docker Compose.</li>
+            <li>Set up CI/CD with GitHub Actions, including automated testing, linting, versioning, and release workflows.</li>
+          </ul>
           <div class="proj-tech">
             <span class="chip">Python</span><span class="chip">Streamlit</span>
             <span class="chip">FastAPI</span><span class="chip">PostgreSQL</span>
@@ -461,42 +477,69 @@
       <div class="proj-group">
       <h3 class="proj-subhead">Cloud Projects</h3>
       <div class="proj-grid">
-        <div class="card proj-card">
+        <div class="card proj-card featured">
           <span class="tag">Cloud Architecture · EPITA 2026</span>
           <h3>UrbanMove - Cloud-Native Smart Mobility Platform</h3>
           <p>
-            Designed and deployed a cloud-native smart city platform that simulates real-time urban
-            traffic and provides congestion-aware route recommendations. Built a scalable AWS architecture
-            with automated CI/CD pipelines; the platform ingests live vehicle telemetry, analyzes traffic
-            conditions, and visualizes optimized routes on an interactive web application powered by
-            OpenStreetMap and OSRM.
+            Designed and deployed a cloud-native smart mobility platform that simulates real-time urban
+            traffic and provides congestion-aware route recommendations. The platform processes vehicle
+            telemetry, analyzes current traffic conditions, and presents optimized routes through an
+            interactive web application using OpenStreetMap and OSRM.
           </p>
+          <p>
+            Built a scalable AWS architecture with containerized services and automated CI/CD, covering
+            the application backend, data storage, authentication, monitoring, and deployment.
+          </p>
+          <h4>Key Contributions</h4>
+          <ul class="feat-list" style="margin-bottom:16px;">
+            <li>Designed and deployed the AWS cloud architecture using ECS Fargate, ECR, Application Load Balancer, DynamoDB, Cognito, and CloudWatch.</li>
+            <li>Developed the FastAPI backend for vehicle telemetry processing, traffic analysis, and route recommendations.</li>
+            <li>Built the React web application to visualize traffic conditions and optimized routes using OpenStreetMap and OSRM.</li>
+            <li>Containerized application services with Docker and deployed them on AWS ECS Fargate.</li>
+            <li>Implemented CI/CD pipelines with GitLab CI/CD to automate application builds, container publishing, and deployment.</li>
+            <li>Integrated AWS Cognito for user authentication and CloudWatch for application and infrastructure monitoring.</li>
+          </ul>
           <div class="proj-tech">
-            <span class="chip">ECS Fargate</span><span class="chip">ECR</span>
-            <span class="chip">ALB</span><span class="chip">DynamoDB</span>
-            <span class="chip">Cognito</span><span class="chip">CloudWatch</span>
-            <span class="chip">Docker</span><span class="chip">FastAPI</span>
-            <span class="chip">React</span><span class="chip">GitLab CI/CD</span>
-            <span class="chip">OpenStreetMap</span><span class="chip">OSRM</span>
+            <span class="chip">AWS</span><span class="chip">ECS Fargate</span>
+            <span class="chip">ECR</span><span class="chip">Application Load Balancer</span>
+            <span class="chip">DynamoDB</span><span class="chip">Cognito</span>
+            <span class="chip">CloudWatch</span><span class="chip">Docker</span>
+            <span class="chip">FastAPI</span><span class="chip">React</span>
+            <span class="chip">GitLab CI/CD</span><span class="chip">OpenStreetMap</span>
+            <span class="chip">OSRM</span>
           </div>
         </div>
-        <div class="card proj-card">
+        <div class="card proj-card featured">
           <span class="tag">Serverless Data &amp; AI · EPITA 2026</span>
           <h3>Smart Healthcare Operations - Serverless Data &amp; AI Platform</h3>
           <p>
             Developed an end-to-end serverless AWS data platform for remote patient monitoring and
-            healthcare analytics. Simulated wearable-device telemetry is ingested through API Gateway and
-            Lambda into a Bronze/Silver/Gold data lake on S3, where AWS Glue ETL pipelines transform raw
-            events into analytics-ready datasets. Anomaly-detection workflows and operational dashboards
-            built with Athena and Grafana surface abnormal patient vital signs and healthcare insights in
-            near real time.
+            healthcare analytics. The platform simulates wearable-device telemetry and processes it through
+            a Bronze/Silver/Gold data lake architecture, transforming raw events into analytics-ready
+            datasets for anomaly detection and operational monitoring.
           </p>
+          <p>
+            Built the platform using managed AWS services, with AWS Glue and PySpark handling data
+            transformation and Amazon Athena providing SQL-based analytics. Grafana dashboards visualize
+            patient vital signs and operational metrics, helping identify abnormal readings and monitor
+            healthcare activity in near real time.
+          </p>
+          <h4>Key Contributions</h4>
+          <ul class="feat-list" style="margin-bottom:16px;">
+            <li>Designed a serverless AWS data architecture using API Gateway, Lambda, S3, Glue, and Athena.</li>
+            <li>Built a Bronze/Silver/Gold data lake to organize raw telemetry, processed data, and analytics-ready datasets.</li>
+            <li>Developed AWS Glue ETL pipelines with PySpark to clean, transform, and prepare wearable-device telemetry for analysis.</li>
+            <li>Implemented anomaly-detection workflows to identify abnormal patient vital signs from telemetry data.</li>
+            <li>Built analytical queries with Amazon Athena for healthcare monitoring and operational analysis.</li>
+            <li>Developed Grafana dashboards to visualize vital signs, anomalies, and operational metrics in near real time.</li>
+            <li>Containerized and automated the data-processing components where appropriate using Python-based workflows.</li>
+          </ul>
           <div class="proj-tech">
-            <span class="chip">API Gateway</span><span class="chip">Lambda</span>
-            <span class="chip">S3</span><span class="chip">Glue</span>
-            <span class="chip">Athena</span><span class="chip">PySpark</span>
-            <span class="chip">Python</span><span class="chip">Grafana</span>
-            <span class="chip">Data Lakehouse</span><span class="chip">Anomaly Detection</span>
+            <span class="chip">AWS</span><span class="chip">API Gateway</span>
+            <span class="chip">Lambda</span><span class="chip">S3</span>
+            <span class="chip">Glue</span><span class="chip">Athena</span>
+            <span class="chip">PySpark</span><span class="chip">Python</span>
+            <span class="chip">Grafana</span>
           </div>
         </div>
       </div>
