@@ -1,6 +1,6 @@
 # Thin Sapal Yu - Portfolio
 
-Personal portfolio site for **Thin Sapal Yu**, Software Engineer / AI & Data Engineer (internship from Oct 2026).
+Personal portfolio site for **Thin Sapal Yu**, Software Engineer / Data & AI Engineer (internship from Oct 2026).
 
 🔗 **Live site:** https://t-sapalyu.github.io/aboutme/
 
